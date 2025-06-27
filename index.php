@@ -6,7 +6,6 @@ class Movie
     public $description;
     public $year;
     public $genre;
-
     public static $length = 'feature';
 
     public function __construct($title, $description, $year, Genre $genre)
