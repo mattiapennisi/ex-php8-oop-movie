@@ -13,6 +13,11 @@ class Movie
         $this->description = $description;
         $this->year = $year;
     }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
 };
 
 class Genre
@@ -20,17 +25,17 @@ class Genre
     public $name;
     public $description;
 
-    public function __construct($name, $description)
+    public function __construct($_name, $_description)
     {
-        $this->name = $name;
-        $this->description = $description;
+        $this->name = $_name;
+        $this->description = $_description;
     }
 }
 
 $movieJaws = new Movie('Jaws', 'Nice movie', 1975);
 $movieIntolerance = new Movie('Intolerance', 'Good old movie', 1916);
 
-
+$jawsDescription = $movieJaws->getDescription();
 
 ?>
 
@@ -50,8 +55,10 @@ $movieIntolerance = new Movie('Intolerance', 'Good old movie', 1916);
     var_dump($movieJaws);
     var_dump($movieIntolerance);
 
+    var_dump($jawsDescription);
+
     ?>
-    
+
 </body>
 
 </html>
