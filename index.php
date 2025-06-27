@@ -58,8 +58,6 @@ $jawsDescription = $movieJaws->getDescription();
     var_dump($movieJaws);
     var_dump($movieIntolerance);
 
-    var_dump($jawsDescription);
-
     ?>
 
 </body>
