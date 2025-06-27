@@ -5,13 +5,16 @@ class Movie
     public $title;
     public $description;
     public $year;
+    public $genre;
 
-    public function __construct($title, $description, $year)
+    public static $length = 'feature';
+
+    public function __construct($title, $description, $year, Genre $genre)
     {
-
         $this->title = $title;
         $this->description = $description;
         $this->year = $year;
+        $this->genre = $genre;
     }
 
     public function getDescription()
@@ -32,8 +35,8 @@ class Genre
     }
 }
 
-$movieJaws = new Movie('Jaws', 'Nice movie', 1975);
-$movieIntolerance = new Movie('Intolerance', 'Good old movie', 1916);
+$movieJaws = new Movie('Jaws', 'Nice movie', 1975, new Genre('Thriller', 'Suspenseful, tense, mysterious, fast-paced, dangerous'));
+$movieIntolerance = new Movie('Intolerance', 'Good old movie', 1916, new Genre('Drama', 'Emotional, realistic, character-driven, serious, impactful'));
 
 $jawsDescription = $movieJaws->getDescription();
 
