@@ -1,7 +1,7 @@
 <?php 
 
-include_once('./traits/rating.php');
-include_once('./models/movie.php');
+require_once('./traits/rating.php');
+require_once('./models/movie.php');
 
 class Genre
 {

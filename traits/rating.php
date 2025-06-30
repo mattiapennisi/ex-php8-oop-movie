@@ -1,7 +1,7 @@
 <?php 
 
-include_once('./models/movie.php');
-include_once('./models/genre.php');
+require_once('./models/movie.php');
+require_once('./models/genre.php');
 
 trait Rating {
     public $rating = 0;

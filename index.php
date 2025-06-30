@@ -20,8 +20,7 @@ include_once('./db.php');
 
     <?php
 
-    var_dump($movieJaws);
-    var_dump($movieIntolerance);
+    var_dump($movies);
 
     ?>
 
