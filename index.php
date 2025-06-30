@@ -2,18 +2,21 @@
 
 class Movie
 {
+    use Rating;
     public $title;
     public $description;
     public $year;
-    public $genre;
+    public $genreOne;
+    public $genreTwo;
     public static $length = 'feature';
 
-    public function __construct($title, $description, $year, Genre $genre)
+    public function __construct($title, $description, $year, Genre $genreOne, Genre $genreTwo)
     {
         $this->title = $title;
         $this->description = $description;
         $this->year = $year;
-        $this->genre = $genre;
+        $this->genreOne = $genreOne;
+        $this->genreTwo = $genreTwo;
     }
 
     public function getDescription()
@@ -34,8 +37,20 @@ class Genre
     }
 }
 
-$movieJaws = new Movie('Jaws', 'Nice movie', 1975, new Genre('Thriller', 'Suspenseful, tense, mysterious, fast-paced, dangerous'));
-$movieIntolerance = new Movie('Intolerance', 'Good old movie', 1916, new Genre('Drama', 'Emotional, realistic, character-driven, serious, impactful'));
+trait Rating {
+    public $rating = 0;
+
+    public function setRating($rating) {
+        $this->rating = $rating;
+    }
+
+    public function getRating() {
+        return $this->rating;
+    }
+}
+
+$movieJaws = new Movie('Jaws', 'Nice movie', 1975, new Genre('Thriller', 'Suspenseful, tense, mysterious, fast-paced, dangerous'), new Genre('Drama', 'Emotional, realistic, character-driven, serious, impactful'));
+$movieIntolerance = new Movie('Intolerance', 'Good old movie', 1916, new Genre('Drama', 'Emotional, realistic, character-driven, serious, impactful'), new Genre('Thriller', 'Suspenseful, tense, mysterious, fast-paced, dangerous'));
 
 $jawsDescription = $movieJaws->getDescription();
 
