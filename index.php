@@ -1,6 +1,9 @@
 <?php
 
-
+include_once('./traits/rating.php');
+include_once('./models/movie.php');
+include_once('./models/genre.php');
+include_once('./db.php');
 
 ?>
 

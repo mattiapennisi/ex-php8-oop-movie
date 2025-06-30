@@ -1,5 +1,8 @@
 <?php 
 
+include_once('./traits/rating.php');
+include_once('./models/genre.php');
+
 class Movie
 {
     use Rating;
