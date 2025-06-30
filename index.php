@@ -42,7 +42,7 @@ include_once('./db.php');
                                 <p class='card-text' style='height: 140px; overflow: hidden;'>{$movie->description}</p>
                                 <div class='mb-2'>
                                     <span class='badge bg-primary me-1'>{$movie->genreOne->name}</span>
-                                    <span class='badge bg-secondary'>{$movie->genreTwo->name}</span>
+                                    <span class='badge bg-primary'>{$movie->genreTwo->name}</span>
                                 </div>
                                 <p class='card-text'><strong>Rating: {$movie->rating}/10</strong></p>
                             </div>
