@@ -18,16 +18,18 @@ $genreWar = new Genre('War', 'Military, conflict, heroic, intense, historical');
 $genreDocumentary = new Genre('Documentary', 'Factual, informative, educational, real-life, investigative');
 
 $movies = [
-    new Movie('Jaws', 'Nice movie', 1975, $genreThriller, $genreAction),
-    new Movie('Intolerance', 'Good old movie', 1916, $genreDrama, $genreRomance),
-    new Movie('The Godfather', 'Epic crime saga', 1972, $genreDrama, $genreCrime),
-    new Movie('Pulp Fiction', 'Nonlinear narrative masterpiece', 1994, $genreThriller, $genreCrime),
-    new Movie('The Shawshank Redemption', 'Story of hope and friendship', 1994, $genreDrama, $genreThriller),
-    new Movie('Casablanca', 'Classic wartime romance', 1942, $genreRomance, $genreWar),
-    new Movie('The Dark Knight', 'Batman versus Joker', 2008, $genreAction, $genreThriller),
-    new Movie('Schindler\'s List', 'Holocaust drama', 1993, $genreDrama, $genreWar),
-    new Movie('Goodfellas', 'Mafia life story', 1990, $genreCrime, $genreDrama),
-    new Movie('The Silence of the Lambs', 'Psychological thriller', 1991, $genreThriller, $genreHorror),
+    new Movie('Jaws', 'A giant shark terrorizes a beach town during summer season, creating panic among tourists and locals alike.', 1975, $genreThriller, $genreAction),
+    new Movie('Intolerance', 'Four interconnected stories spanning different time periods explore themes of prejudice, love, and human intolerance throughout history.', 1916, $genreDrama, $genreRomance),
+    new Movie('The Godfather', 'An aging patriarch of an organized crime dynasty transfers control to his reluctant son Michael Corleone.', 1972, $genreDrama, $genreCrime),
+    new Movie('Pulp Fiction', 'Two hitmen, a boxer, and a gangster\'s wife interweave in this nonlinear tale of crime and redemption.', 1994, $genreThriller, $genreCrime),
+    new Movie('The Shawshank Redemption', 'A banker wrongly convicted of murder finds hope and friendship during his decades in Shawshank State Penitentiary.', 1994, $genreDrama, $genreThriller),
+    new Movie('Casablanca', 'An American expatriate in Morocco must choose between love and virtue during World War II occupation.', 1942, $genreRomance, $genreWar),
+    new Movie('The Dark Knight', 'Batman faces his greatest challenge yet when the Joker wreaks havoc and chaos on Gotham City.', 2008, $genreAction, $genreThriller),
+    new Movie('Schindler\'s List', 'A German industrialist saves over a thousand Polish Jews during the Holocaust by employing them in factories.', 1993, $genreDrama, $genreWar),
+    new Movie('Goodfellas', 'The rise and fall of mob associate Henry Hill and his friends in the Lucchese crime family.', 1990, $genreCrime, $genreDrama),
+    new Movie('The Silence of the Lambs', 'A young FBI cadet seeks help from imprisoned cannibal Hannibal Lecter to catch another serial killer.', 1991, $genreThriller, $genreHorror),
+    new Movie('Forrest Gump', 'A simple man with a low IQ witnesses and influences several defining historical events in America.', 1994, $genreDrama, $genreComedy),
+    new Movie('The Matrix', 'A computer hacker discovers reality is a simulation and joins a rebellion against the machines controlling humanity.', 1999, $genreSciFi, $genreAction),
 ];
 
 $movies[0]->setRating(8);
@@ -40,3 +42,5 @@ $movies[6]->setRating(9.0);
 $movies[7]->setRating(8.9);
 $movies[8]->setRating(8.7);
 $movies[9]->setRating(8.6);
+$movies[10]->setRating(8.8);
+$movies[11]->setRating(8.7);

@@ -30,26 +30,30 @@ include_once('./db.php');
         <h1 class="text-center mt-4">Movies list</h1>
 
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 my-4">
-            <?php 
-            
+            <?php
+
             foreach ($movies as $movie) {
                 echo "
                     <div class='col'>
-                        <div class='card' style='height: 250px; overflow: hidden;'>
+                        <div class='card' style='height: 350px; overflow: hidden;'>
                             <div class='card-body'>
-                                <h4 class='card-title'>$movie->title</h4>
-                                <p class='card-text'>$movie->year</p>
-                                <p class='card-text'>$movie->description</p>
-                                <p class='card-text'>Rating: $movie->rating/10</p>
+                                <h4 class='card-title'>{$movie->title}</h4>
+                                <p class='card-text'><small class='text-muted'>{$movie->year}</small></p>
+                                <p class='card-text' style='height: 140px; overflow: hidden;'>{$movie->description}</p>
+                                <div class='mb-2'>
+                                    <span class='badge bg-primary me-1'>{$movie->genreOne->name}</span>
+                                    <span class='badge bg-secondary'>{$movie->genreTwo->name}</span>
+                                </div>
+                                <p class='card-text'><strong>Rating: {$movie->rating}/10</strong></p>
                             </div>
                         </div>
                     </div>
                 ";
             }
-            
+
             ?>
         </div>
-        
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
